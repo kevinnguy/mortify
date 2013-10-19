@@ -4,9 +4,9 @@ r1
 cCheck dependencies
 cProcessPCH /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/PrecompiledHeaders/Mortify-Prefix-fdcverjoxooumuacogwdiullqygv/Mortify-Prefix.pch.pch Mortify/Mortify-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/main.o /Users/america/mortify/Mortify/Mortify/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o /Users/america/mortify/Mortify/Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTAppDelegate.o /Users/america/mortify/Mortify/Mortify/MTAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o /Users/america/mortify/Mortify/Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTAppDelegate.o /Users/america/mortify/Mortify/Mortify/MTAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o /Users/america/mortify/Mortify/Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i386
 cGenerateDSYMFile /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify
 cCompileStoryboard /Users/america/mortify/Mortify/Mortify/Base.lproj/Main_iPad.storyboard
@@ -222,7 +222,7 @@ t1379531400
 s20484
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o
-t1382203772
+t1382204177
 s55196
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTAppDelegate.o
@@ -230,8 +230,8 @@ t1382199822
 s65288
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o
-t1382203300
-s71996
+t1382204309
+s78604
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/Mortify.LinkFileList
 c000000005262B985000000000000026F
@@ -255,11 +255,11 @@ t1382199822
 s107816
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app
-t1382203772
+t1382204309
 s340
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM
-t1382203763
+t1382204177
 s102
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/ActivityCell.nib
@@ -279,8 +279,8 @@ t1382199823
 s1282
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify
-t1382203772
-s39520
+t1382204309
+s40112
 
 N/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/PkgInfo
 t1382199823
@@ -316,9 +316,9 @@ t1382203254
 s319
 
 N/Users/america/mortify/Mortify/Mortify/MTActivityCell.m
-c000000005262C17C0000000000000666
-t1382203772
-s1638
+c000000005262C310000000000000064B
+t1382204176
+s1611
 
 N/Users/america/mortify/Mortify/Mortify/MTAppDelegate.h
 c000000005262B1B70000000000000115
@@ -336,9 +336,9 @@ t1382201733
 s321
 
 N/Users/america/mortify/Mortify/Mortify/MTViewController.m
-c000000005262BFA40000000000000AAB
-t1382203300
-s2731
+c000000005262C3950000000000000D28
+t1382204309
+s3368
 
 N/Users/america/mortify/Mortify/Mortify/Mortify-Info.plist
 c000000005262B1B70000000000000635
@@ -479,7 +479,7 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies3c2dbbfcf812b841^cea6bbfcf812b841^---0#1#1#--18"Check dependencies36"FAFD5ED8-7B25-4093-92CC-6039389D18C2-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies2bdfa715fb12b841^2541a815fb12b841^---0#1#1#--18"Check dependencies36"AB86E1AC-FE3B-4EEE-A2AF-D41301F10A3A-
 
 CCompileAssetCatalog /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app /Users/america/mortify/Mortify/Mortify/Images.xcassets
 s403892622.282029
@@ -498,8 +498,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compil
 b54461D80-1BAB-4EF2-8E20-C1C151FCC6B2
 
 CCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o /Users/america/mortify/Mortify/Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s403896572.735573
-e403896572.806996
+s403896976.907832
+e403896977.017035
 r1
 xCompileC
 xDerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o
@@ -510,8 +510,8 @@ xobjective-c
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/america/mortify/Mortify/Mortify/MTActivityCell.m
 d/Users/america/mortify/Mortify/Mortify/MTActivityCell.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/america/mortify/Mortify/Mortify/MTActivityCell.m228"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9066bcfcf812b841^aed9cefcf812b841^---0#0#1#-19%DVTDocumentLocation2@71"file://localhost/Users/america/mortify/Mortify/Mortify/MTActivityCell.m0000000000000000^3799"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/america/mortify/Mortify    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/america/mortify/Mortify/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-generated-files.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-own-target-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-all-target-headers.hmap -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-project-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources/i386 -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -include /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/PrecompiledHeaders/Mortify-Prefix-fdcverjoxooumuacogwdiullqygv/Mortify-Prefix.pch -MMD -MT dependencies -MF /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.d --serialize-diagnostics /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.dia -c /Users/america/mortify/Mortify/Mortify/MTActivityCell.m -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o36"828C57C8-EDE6-4A70-9C53-2D630EFB0E98-
-bF1690876-12C2-4B97-ACBA-90B35C1C723E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection63"Compile /Users/america/mortify/Mortify/Mortify/MTActivityCell.m228"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerebaae890fa12b841^34660e91fa12b841^---0#0#1#-19%DVTDocumentLocation2@71"file://localhost/Users/america/mortify/Mortify/Mortify/MTActivityCell.m0000000000000000^3799"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o Mortify/MTActivityCell.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/america/mortify/Mortify    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/america/mortify/Mortify/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-generated-files.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-own-target-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-all-target-headers.hmap -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-project-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources/i386 -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -include /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/PrecompiledHeaders/Mortify-Prefix-fdcverjoxooumuacogwdiullqygv/Mortify-Prefix.pch -MMD -MT dependencies -MF /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.d --serialize-diagnostics /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.dia -c /Users/america/mortify/Mortify/Mortify/MTActivityCell.m -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTActivityCell.o36"16342869-F1CF-4408-A0B9-4813348DE600-
+b4D729F16-D884-46F7-B8F4-53631D363E5D
 
 CCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTAppDelegate.o /Users/america/mortify/Mortify/Mortify/MTAppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s403892622.026325
@@ -530,8 +530,8 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection62"Compile
 b54461D80-1BAB-4EF2-8E20-C1C151FCC6B2
 
 CCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o /Users/america/mortify/Mortify/Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s403896100.675579
-e403896100.784002
+s403897109.659671
+e403897109.755295
 r1
 xCompileC
 xDerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o
@@ -543,8 +543,8 @@ xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/america/mortify/Mortify/Mortify/MTViewController.m
 d/Users/america/mortify/Mortify/Mortify/MTViewController.h
 d/Users/america/mortify/Mortify/Mortify/MTActivityCell.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/america/mortify/Mortify/Mortify/MTViewController.m232"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerbe15ad24f712b841^06f6cc24f712b841^---0#0#1#-19%DVTDocumentLocation2@73"file://localhost/Users/america/mortify/Mortify/Mortify/MTViewController.m0000000000000000^3811"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/america/mortify/Mortify    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/america/mortify/Mortify/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-generated-files.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-own-target-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-all-target-headers.hmap -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-project-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources/i386 -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -include /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/PrecompiledHeaders/Mortify-Prefix-fdcverjoxooumuacogwdiullqygv/Mortify-Prefix.pch -MMD -MT dependencies -MF /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.d --serialize-diagnostics /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.dia -c /Users/america/mortify/Mortify/Mortify/MTViewController.m -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o36"A0E67ECF-2EAB-407F-92CB-6EDB62008B14-
-bBDFCFE25-77C3-4224-ADF0-F0D286CC640E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection65"Compile /Users/america/mortify/Mortify/Mortify/MTViewController.m232"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3bfda815fb12b841^b950d515fb12b841^---0#0#1#-19%DVTDocumentLocation2@73"file://localhost/Users/america/mortify/Mortify/Mortify/MTViewController.m0000000000000000^3811"CompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o Mortify/MTViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/america/mortify/Mortify    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/america/mortify/Mortify/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.0 -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-generated-files.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-own-target-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-all-target-headers.hmap -iquote /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Mortify-project-headers.hmap -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources/i386 -I/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/DerivedSources -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -include /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/PrecompiledHeaders/Mortify-Prefix-fdcverjoxooumuacogwdiullqygv/Mortify-Prefix.pch -MMD -MT dependencies -MF /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.d --serialize-diagnostics /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.dia -c /Users/america/mortify/Mortify/Mortify/MTViewController.m -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/MTViewController.o36"AC7F5C3E-5FC1-4967-A59B-1BEE3A4065DD-
+b22D28A1F-0A40-48E1-9881-127C7685CE1A
 
 CCompileC DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/main.o /Users/america/mortify/Mortify/Mortify/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s403892622.026318
@@ -602,18 +602,18 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection39"Copy Mo
 b54461D80-1BAB-4EF2-8E20-C1C151FCC6B2
 
 CGenerateDSYMFile /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify
-s403896572.858767
-e403896572.879849
+s403897109.821439
+e403897109.842803
 r1
 xGenerateDSYMFile
 x/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM
 x/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Generate /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM167"GenerateDSYMFile DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify3ae7dbfcf812b841^603ee1fcf812b841^---0#0#1#-19%DVTDocumentLocation2@121"file://localhost/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM/0000000000000000^717"GenerateDSYMFile DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify    cd /Users/america/mortify/Mortify    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM36"E740FAF8-8FBD-4F34-BE03-7505BA171F04-
-bF1690876-12C2-4B97-ACBA-90B35C1C723E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Generate /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM167"GenerateDSYMFile DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortifyb75fd215fb12b841^7fdbd715fb12b841^---0#0#1#-19%DVTDocumentLocation2@121"file://localhost/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM/0000000000000000^717"GenerateDSYMFile DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify    cd /Users/america/mortify/Mortify    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app.dSYM36"D73E2681-3669-475D-9342-BD2136CC645E-
+b22D28A1F-0A40-48E1-9881-127C7685CE1A
 
 CLd /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i386
-s403896572.817029
-e403896572.849632
+s403897109.764942
+e403897109.812799
 r1
 xLd
 x/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify
@@ -639,7 +639,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreText.framework/CoreText
-d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
@@ -661,6 +660,7 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
 d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
 d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
 d/usr/lib/system/libcache.dylib
 d/usr/lib/system/libcommonCrypto.dylib
@@ -682,8 +682,8 @@ d/usr/lib/system/libsystem_notify.dylib
 d/usr/lib/system/libsystem_sandbox.dylib
 d/usr/lib/system/libunc.dylib
 d/usr/lib/system/libunwind.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Link /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify91"Ld DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i386cd3cd1fcf812b841^8882d9fcf812b841^---0#0#1#--1461"Ld DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i386    cd /Users/america/mortify/Mortify    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -filelist /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/Mortify.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/Mortify_dependency_info.dat -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify36"ABD97312-B566-43BA-AC1B-0E74995512DC-
-bF1690876-12C2-4B97-ACBA-90B35C1C723E
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Link /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify91"Ld DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i38657ecc315fb12b841^336ad615fb12b841^---0#0#1#--1461"Ld DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify normal i386    cd /Users/america/mortify/Mortify    setenv IPHONEOS_DEPLOYMENT_TARGET 7.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -F/Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator -filelist /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/Mortify.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.0 -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Intermediates/Mortify.build/Debug-iphonesimulator/Mortify.build/Objects-normal/i386/Mortify_dependency_info.dat -o /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Mortify36"659ED50A-BCB5-4EBA-B88C-34A51EC2BEB6-
+b22D28A1F-0A40-48E1-9881-127C7685CE1A
 
 CProcessInfoPlistFile /Users/america/mortify/Mortify/DerivedData/Mortify/Build/Products/Debug-iphonesimulator/Mortify.app/Info.plist /Users/america/mortify/Mortify/Mortify/Mortify-Info.plist
 s403892623.468476
