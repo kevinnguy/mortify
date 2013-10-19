@@ -26,6 +26,9 @@
 		9D493CBC1812FCD8000D287A /* UIColor+Mortify.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CBB1812FCD8000D287A /* UIColor+Mortify.m */; };
 		9D493CBF1813092D000D287A /* MTActivityDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CBE1813092D000D287A /* MTActivityDetailsViewController.m */; };
 		9D493CC51813104E000D287A /* MTAddActivityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CC41813104E000D287A /* MTAddActivityTableViewController.m */; };
+		9D493CC818133262000D287A /* MTUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CC718133262000D287A /* MTUserViewController.m */; };
+		9D493CCB18133DA2000D287A /* UIFont+Mortify.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CCA18133DA2000D287A /* UIFont+Mortify.m */; };
+		9D493CCE18134082000D287A /* MTActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CCD18134082000D287A /* MTActivity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,12 @@
 		9D493CBE1813092D000D287A /* MTActivityDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActivityDetailsViewController.m; sourceTree = "<group>"; };
 		9D493CC31813104E000D287A /* MTAddActivityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAddActivityTableViewController.h; sourceTree = "<group>"; };
 		9D493CC41813104E000D287A /* MTAddActivityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTAddActivityTableViewController.m; sourceTree = "<group>"; };
+		9D493CC618133262000D287A /* MTUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTUserViewController.h; sourceTree = "<group>"; };
+		9D493CC718133262000D287A /* MTUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTUserViewController.m; sourceTree = "<group>"; };
+		9D493CC918133DA2000D287A /* UIFont+Mortify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Mortify.h"; sourceTree = "<group>"; };
+		9D493CCA18133DA2000D287A /* UIFont+Mortify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Mortify.m"; sourceTree = "<group>"; };
+		9D493CCC18134082000D287A /* MTActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActivity.h; sourceTree = "<group>"; };
+		9D493CCD18134082000D287A /* MTActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActivity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,12 +145,18 @@
 				9D493CBE1813092D000D287A /* MTActivityDetailsViewController.m */,
 				9D493CC31813104E000D287A /* MTAddActivityTableViewController.h */,
 				9D493CC41813104E000D287A /* MTAddActivityTableViewController.m */,
+				9D493CC618133262000D287A /* MTUserViewController.h */,
+				9D493CC718133262000D287A /* MTUserViewController.m */,
 				9D493CB71812F084000D287A /* MTActivityCell.h */,
 				9D493CB81812F084000D287A /* MTActivityCell.m */,
 				9D493CBA1812FCD8000D287A /* UIColor+Mortify.h */,
 				9D493CBB1812FCD8000D287A /* UIColor+Mortify.m */,
 				9D493C981812E937000D287A /* Images.xcassets */,
 				9D493C841812E937000D287A /* Supporting Files */,
+				9D493CC918133DA2000D287A /* UIFont+Mortify.h */,
+				9D493CCA18133DA2000D287A /* UIFont+Mortify.m */,
+				9D493CCC18134082000D287A /* MTActivity.h */,
+				9D493CCD18134082000D287A /* MTActivity.m */,
 			);
 			path = Mortify;
 			sourceTree = "<group>";
@@ -274,13 +289,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D493CC818133262000D287A /* MTUserViewController.m in Sources */,
 				9D493C8A1812E937000D287A /* main.m in Sources */,
 				9D493CBF1813092D000D287A /* MTActivityDetailsViewController.m in Sources */,
 				9D493CB91812F084000D287A /* MTActivityCell.m in Sources */,
 				9D493C971812E937000D287A /* MTViewController.m in Sources */,
 				9D493CBC1812FCD8000D287A /* UIColor+Mortify.m in Sources */,
 				9D493C8E1812E937000D287A /* MTAppDelegate.m in Sources */,
+				9D493CCE18134082000D287A /* MTActivity.m in Sources */,
 				9D493CC51813104E000D287A /* MTAddActivityTableViewController.m in Sources */,
+				9D493CCB18133DA2000D287A /* UIFont+Mortify.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

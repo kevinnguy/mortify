@@ -15,4 +15,8 @@
     #import <Foundation/Foundation.h>
 
     #import "UIColor+Mortify.h"
+    #import "UIFont+Mortify.h"
+
+#define ACTIVITY_CELL @"ActivityCell"
+
 #endif

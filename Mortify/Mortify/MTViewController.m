@@ -11,8 +11,9 @@
 #import "MTAddActivityTableViewController.h"
 #import "MTActivityDetailsViewController.h"
 #import "MTActivityCell.h"
+#import "MTActivity.h"
 
-@interface MTViewController ()
+@interface MTViewController () <MTAddActivityDelegate>
 @property (nonatomic, strong) NSMutableArray *activityLogMutableArray;
 
 @property (nonatomic, strong) UIScrollView *timerScrollView;
@@ -21,21 +22,30 @@
 
 @end
 
-#define ACTIVITY_CELL @"ActivityCell"
 
 @implementation MTViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self setupTabBar];
     [self setupNavigationBar];
     [self setupTableView];
     [self setupTimerView];
     
-    self.activityLogMutableArray = [@[@"Add Activity", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping"] mutableCopy];
-    
+    MTActivity *addActivity = [[MTActivity alloc] initWithActivity:@"Add Activity" score:0];
+    self.activityLogMutableArray = [@[addActivity] mutableCopy];
 }
 
+- (void)setupTabBar {
+    [self.tabBarController.tabBar.items[0] setTitle:@"Home"];
+    [self.tabBarController.tabBar.items[1] setTitle:@"Me"];
+    [self.tabBarController.tabBar.items[2] setTitle:@"Social"];
+    
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setImage:[UIImage imageNamed:@""]];
+    [[self.tabBarController.tabBar.items objectAtIndex:1] setImage:[UIImage imageNamed:@""]];
+    [[self.tabBarController.tabBar.items objectAtIndex:2] setImage:[UIImage imageNamed:@""]];
+}
 
 - (void)setupNavigationBar {
     self.navigationItem.title = @"Home View";
@@ -62,7 +72,7 @@
 
     
     self.countdownTimer = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, CGRectGetWidth(self.timerScrollView.frame) - 30 - 30, 80)];
-    self.countdownTimer.font = [UIFont systemFontOfSize:48.0f];
+    self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:56.0f];
     self.countdownTimer.textAlignment = NSTextAlignmentCenter;
     self.countdownTimer.textColor = [UIColor whiteColor];
     self.countdownTimer.text = @"13:35:23";
@@ -83,7 +93,7 @@
 
 - (void)segueToAddActivityProgrammatically {
     MTAddActivityTableViewController *viewController = [[MTAddActivityTableViewController alloc] init];
-//    viewController.delegate = self;
+    viewController.delegate = self;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [self presentViewController:navigationController animated:YES completion:nil];
 }
@@ -109,8 +119,22 @@
             cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
         }
         
-        cell.activityLabel.text = self.activityLogMutableArray[indexPath.row];
-        cell.microMortLabel.text = @"2";
+        MTActivity *activity = self.activityLogMutableArray[indexPath.row];
+        cell.activityLabel.text = activity.name;
+        
+        if (indexPath.row == 0) {
+            cell.microMortLabel.text = @"";
+            
+        } else {
+            if (activity.score > 0) {
+                cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
+                cell.microMortLabel.layer.borderColor = [UIColor greenColor].CGColor;
+            } else {
+                cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
+                cell.microMortLabel.layer.borderColor = [UIColor redMortifyColor].CGColor;
+            }
+        }
+        
         
         return cell;
     }
@@ -128,6 +152,12 @@
             [self performSegueWithIdentifier:@"SegueToActivityDetails" sender:self];
         }
     }
+}
+
+#pragma mark - MTAddActivityDelegate
+- (void)didAddActivity:(MTActivity *)activity {
+    [self.activityLogMutableArray addObject:activity];
+    [self.tableView reloadData];
 }
 
 @end

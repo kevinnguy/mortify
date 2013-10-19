@@ -8,6 +8,8 @@
 
 #import "MTAddActivityTableViewController.h"
 
+#import "MTActivityCell.h"
+
 @interface MTAddActivityTableViewController () <UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UISearchBar *searchBar;
 @property (nonatomic, strong) UISearchDisplayController *searchController;
@@ -26,13 +28,24 @@
     
     self.searchResultsMutableArray = [[NSMutableArray alloc] init];
     
+    self.searchResultsMutableArray = [@[[[MTActivity alloc] initWithActivity:@"Smoking" score:-0.7],
+                                       [[MTActivity alloc] initWithActivity:@"Driving" score:-0.3],
+                                       [[MTActivity alloc] initWithActivity:@"Biking" score:-0.8],
+                                       [[MTActivity alloc] initWithActivity:@"Skydiving" score:-7.0],
+                                       [[MTActivity alloc] initWithActivity:@"Ecstasy" score:-0.5],
+                                       [[MTActivity alloc] initWithActivity:@"Coffee" score:1.0],
+                                       [[MTActivity alloc] initWithActivity:@"Exercise" score:1.0],
+                                       [[MTActivity alloc] initWithActivity:@"Sitting" score:-0.2],
+                                        [[MTActivity alloc] initWithActivity:@"Eating fruits/vegetables" score:0.2],
+                                       ] mutableCopy];
+    
+    // Hack to populate table view when viewDidLoad
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    [self.searchController setActive:YES animated:NO];
-    [self.searchBar becomeFirstResponder];
 }
 
 - (void)setupNavigationBar {
@@ -48,10 +61,17 @@
     self.searchController.delegate = self;
     self.searchController.searchResultsDataSource = self;
     self.searchController.searchResultsDelegate = self;
+    
+    [self.tableView registerClass:[MTActivityCell class] forCellReuseIdentifier:ACTIVITY_CELL];
 }
 
 - (void)cancelBarButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addActivity:(MTActivity *)activity {
+    [self.delegate didAddActivity:activity];
+    [self cancelBarButtonPressed:nil];
 }
 
 #pragma mark - Table view data source
@@ -60,30 +80,42 @@
     
     if (tableView == self.searchController.searchResultsTableView) {
         count = [self.searchResultsMutableArray count];
+    } else if (tableView == self.tableView) {
+        count = [self.searchResultsMutableArray count];
     }
     
     return count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"Cell";
-    if (tableView == self.searchController.searchResultsTableView) {
-        
-    }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    MTActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:ACTIVITY_CELL];
+    
+    if (cell == nil) {
+        cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
     }
     
-    cell.textLabel.font = [UIFont systemFontOfSize:16];
-    cell.textLabel.text = self.searchResultsMutableArray[indexPath.row];
+    MTActivity *activity = self.searchResultsMutableArray[indexPath.row];
+    cell.activityLabel.text = activity.name;
+    
+    if (activity.score > 0) {
+        cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
+        cell.microMortLabel.layer.borderColor = [UIColor greenColor].CGColor;
+    } else {
+        cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
+        cell.microMortLabel.layer.borderColor = [UIColor redMortifyColor].CGColor;
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Go to Activity Details and call delegate to update list in home view
-    [self cancelBarButtonPressed:nil];
+    MTActivity *activity = self.searchResultsMutableArray[indexPath.row];
+    [self addActivity:activity];
 }
 
 #pragma mark - UISearchDisplayController delegate methods
@@ -104,7 +136,10 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     // Go to Activity Details and call delegate to update list in home view
-    [self cancelBarButtonPressed:nil];
+//    [self addActivity:@"Smoking" score:0.7];
 }
+
+
+
 
 @end

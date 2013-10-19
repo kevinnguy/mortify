@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTAddActivityTableViewController : UITableViewController 
+#import "MTActivity.h"
 
+
+@protocol MTAddActivityDelegate <NSObject>
+
+- (void)didAddActivity:(MTActivity *)activity;
+
+@end
+
+@interface MTAddActivityTableViewController : UITableViewController 
+@property (nonatomic, assign) id<MTAddActivityDelegate> delegate;
 @end
