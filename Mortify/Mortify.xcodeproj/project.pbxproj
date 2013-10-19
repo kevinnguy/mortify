@@ -22,6 +22,7 @@
 		9D493CA21812E937000D287A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C811812E937000D287A /* UIKit.framework */; };
 		9D493CAA1812E937000D287A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CA81812E937000D287A /* InfoPlist.strings */; };
 		9D493CAC1812E937000D287A /* MortifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CAB1812E937000D287A /* MortifyTests.m */; };
+		9D493CB91812F084000D287A /* MTActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CB81812F084000D287A /* MTActivityCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		9D493CA71812E937000D287A /* MortifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MortifyTests-Info.plist"; sourceTree = "<group>"; };
 		9D493CA91812E937000D287A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9D493CAB1812E937000D287A /* MortifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MortifyTests.m; sourceTree = "<group>"; };
+		9D493CB71812F084000D287A /* MTActivityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActivityCell.h; sourceTree = "<group>"; };
+		9D493CB81812F084000D287A /* MTActivityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActivityCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				9D493C921812E937000D287A /* Main_iPad.storyboard */,
 				9D493C951812E937000D287A /* MTViewController.h */,
 				9D493C961812E937000D287A /* MTViewController.m */,
+				9D493CB71812F084000D287A /* MTActivityCell.h */,
+				9D493CB81812F084000D287A /* MTActivityCell.m */,
 				9D493C981812E937000D287A /* Images.xcassets */,
 				9D493C841812E937000D287A /* Supporting Files */,
 			);
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D493C8A1812E937000D287A /* main.m in Sources */,
+				9D493CB91812F084000D287A /* MTActivityCell.m in Sources */,
 				9D493C971812E937000D287A /* MTViewController.m in Sources */,
 				9D493C8E1812E937000D287A /* MTAppDelegate.m in Sources */,
 			);

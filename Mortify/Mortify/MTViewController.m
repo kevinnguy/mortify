@@ -8,22 +8,87 @@
 
 #import "MTViewController.h"
 
-@interface MTViewController ()
+#import "MTActivityCell.h"
 
+@interface MTViewController ()
+@property (nonatomic, strong) NSMutableArray *activityLogMutableArray;
+
+@property (nonatomic, strong) UIScrollView *timerScrollView;
+@property (nonatomic, strong) UILabel *countdownTimer;
 @end
+
+#define ACTIVITY_CELL @"ActivityCell"
 
 @implementation MTViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [self setupTableView];
+    [self setupViews];
+    
+    self.activityLogMutableArray = [@[@"Smoking", @"Eating", @"Sleeping"] mutableCopy];
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupTableView {
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    [self.tableView registerClass:[MTActivityCell class] forCellReuseIdentifier:ACTIVITY_CELL];
+
+}
+
+- (void)setupViews {
+    self.timerScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 120)];
+    self.timerScrollView.contentSize = CGSizeMake(CGRectGetWidth(self.tableView.frame) * 4, 120);
+    
+    self.countdownTimer = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, CGRectGetWidth(self.timerScrollView.frame) - 30 - 30, 60)];
+    self.countdownTimer.font = [UIFont systemFontOfSize:26.0f];
+    self.countdownTimer.textAlignment = NSTextAlignmentCenter;
+    self.countdownTimer.text = @"13:35:23";
+    
+    [self.timerScrollView addSubview:self.countdownTimer];
+}
+
+#pragma mark - UITableView delegates
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.activityLogMutableArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.tableView) {
+        MTActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:ACTIVITY_CELL];
+        
+        if (cell == nil) {
+            cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
+        }
+        
+        cell.activityLabel.text = self.activityLogMutableArray[indexPath.row];
+        cell.microMortLabel.text = @"2";
+        
+        return cell;
+    }
+    
+    // Is not suppose to return
+    UITableViewCell *cell;
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    if (tableView == self.tableView) {
+        return self.timerScrollView;
+        
+        
+    }
+    
+    // Is not suppose to return
+    UIView *view;
+    return view;
 }
 
 @end
