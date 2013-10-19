@@ -20,15 +20,16 @@
         self.microMortLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
         self.microMortLabel.font = [UIFont systemFontOfSize:26.0f];
         self.microMortLabel.textAlignment = NSTextAlignmentCenter;
-        self.microMortLabel.textColor = [UIColor purpleColor];
+        self.microMortLabel.textColor = [UIColor whiteColor];
         self.microMortLabel.layer.borderColor = self.microMortLabel.textColor.CGColor;
         self.microMortLabel.layer.borderWidth = 1.0f;
         self.microMortLabel.layer.cornerRadius = CGRectGetWidth(self.microMortLabel.frame) / 2;
         
         self.activityLabel = [[UILabel alloc] initWithFrame:CGRectMake(10 + CGRectGetWidth(self.microMortLabel.frame) + 10, 10, CGRectGetWidth(self.contentView.frame) - 10 - CGRectGetWidth(self.microMortLabel.frame) - 10, 40)];
         self.activityLabel.font = [UIFont systemFontOfSize:26.0f];
-        self.activityLabel.textColor = [UIColor blueColor];
+        self.activityLabel.textColor = [UIColor whiteColor];
         
+        self.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.microMortLabel];
         [self.contentView addSubview:self.activityLabel];
     }
