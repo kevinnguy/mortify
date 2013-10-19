@@ -20,6 +20,7 @@
 @property (nonatomic, strong) UILabel *countdownTimer;
 @property (nonatomic, strong) UIPageControl *timerPageControl;
 
+@property (nonatomic, strong) MTActivity *selectedActivity;
 @end
 
 
@@ -99,7 +100,7 @@
 }
 
 - (void)segueToActivityDetails:(MTActivityDetailsViewController *)destinationViewController {
-    
+    destinationViewController.activity = self.selectedActivity;
 }
 
 #pragma mark - UITableView delegates
@@ -119,20 +120,27 @@
             cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
         }
         
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         MTActivity *activity = self.activityLogMutableArray[indexPath.row];
         cell.activityLabel.text = activity.name;
         
         if (indexPath.row == 0) {
             cell.microMortLabel.text = @"";
-            
+            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
+            [cell.microMortLabel addSubview:imageView];
         } else {
             if (activity.score > 0) {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
-                cell.microMortLabel.layer.borderColor = [UIColor greenColor].CGColor;
+                cell.microMortLabel.backgroundColor = [UIColor greenMortifyColor];
+                cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
             } else {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
-                cell.microMortLabel.layer.borderColor = [UIColor redMortifyColor].CGColor;
+                cell.microMortLabel.backgroundColor = [UIColor orangeMortifyColor];
+                cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
             }
+            
+            cell.microMortLabel.textColor = [UIColor blackBackgroundColor];
         }
         
         
@@ -149,9 +157,12 @@
         if (indexPath.row == 0) {
             [self segueToAddActivityProgrammatically];
         } else {
+            self.selectedActivity = self.activityLogMutableArray[indexPath.row];
             [self performSegueWithIdentifier:@"SegueToActivityDetails" sender:self];
         }
     }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - MTAddActivityDelegate
