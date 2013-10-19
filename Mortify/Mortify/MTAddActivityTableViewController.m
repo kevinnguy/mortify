@@ -98,15 +98,17 @@
         cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
     }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     MTActivity *activity = self.searchResultsMutableArray[indexPath.row];
     cell.activityLabel.text = activity.name;
     
     if (activity.score > 0) {
         cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
-        cell.microMortLabel.layer.borderColor = [UIColor greenColor].CGColor;
+        cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
     } else {
         cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
-        cell.microMortLabel.layer.borderColor = [UIColor redMortifyColor].CGColor;
+        cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
     }
     
     return cell;

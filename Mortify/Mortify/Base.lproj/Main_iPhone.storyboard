@@ -142,10 +142,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mew-xP-dAE"/>
+                    <connections>
+                        <outlet property="tableView" destination="6KL-Jw-DZN" id="ed7-FB-h07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pON-QU-Jsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1948" y="-462"/>
+            <point key="canvasLocation" x="1936" y="36"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="frb-Su-8h6">
