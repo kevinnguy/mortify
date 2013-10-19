@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UISearchDisplayController *searchController;
 
 @property (nonatomic, strong) NSMutableArray *searchResultsMutableArray;
+@property (nonatomic, strong) NSArray *recurringActivitiesArray;
 @end
 
 @implementation MTAddActivityTableViewController
@@ -24,6 +25,7 @@
     [self setupNavigationBar];
     
     self.searchResultsMutableArray = [[NSMutableArray alloc] init];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
