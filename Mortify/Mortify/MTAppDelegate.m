@@ -13,6 +13,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self setupAppearance];
+    
     return YES;
 }
 							
@@ -41,6 +43,20 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setupAppearance {
+    UITabBar *tabBar = [UITabBar appearance];
+    tabBar.barTintColor = [UIColor blackNavigationBarColor];
+    tabBar.tintColor = [UIColor redMortifyColor];
+    
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.barTintColor = [UIColor blackNavigationBarColor];
+    navigationBar.tintColor = [UIColor redMortifyColor];
+    
+    UITableView *tableView = [UITableView appearance];
+    tableView.backgroundColor = [UIColor blackBackgroundColor];
+    tableView.separatorColor = [UIColor whiteTableViewSeparatorColor];
 }
 
 @end

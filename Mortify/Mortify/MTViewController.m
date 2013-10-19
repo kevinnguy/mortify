@@ -8,6 +8,8 @@
 
 #import "MTViewController.h"
 
+#import "MTAddActivityTableViewController.h"
+#import "MTActivityDetailsViewController.h"
 #import "MTActivityCell.h"
 
 @interface MTViewController ()
@@ -26,24 +28,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setupTabbar];
     [self setupNavigationBar];
     [self setupTableView];
-    [self setupViews];
+    [self setupTimerView];
     
-    self.activityLogMutableArray = [@[@"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping"] mutableCopy];
+    self.activityLogMutableArray = [@[@"Add Activity", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping", @"Smoking", @"Eating", @"Sleeping"] mutableCopy];
     
 }
 
-- (void)setupTabbar {
-    self.tabBarController.tabBar.barTintColor = [UIColor blackNavigationBarColor];
-    self.tabBarController.tabBar.tintColor = [UIColor redMortifyColor];
-}
 
 - (void)setupNavigationBar {
-    self.navigationController.navigationBar.barTintColor = [UIColor blackNavigationBarColor];
-    self.navigationController.navigationBar.tintColor = [UIColor redMortifyColor];
-    
     self.navigationItem.title = @"Home View";
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Red Button" style:UIBarButtonItemStyleBordered target:self action:nil];
@@ -53,14 +47,10 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    self.tableView.backgroundColor = [UIColor blackBackgroundColor];
-    self.tableView.separatorColor = [UIColor whiteTableViewSeparatorColor];
-    
     [self.tableView registerClass:[MTActivityCell class] forCellReuseIdentifier:ACTIVITY_CELL];
-
 }
 
-- (void)setupViews {
+- (void)setupTimerView {
     // Timer Scroll View
     int numberOfPages = 4;
     self.timerScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(self.timerView.frame))];
@@ -87,11 +77,18 @@
 #pragma mark - Prepare segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SegueToActivityDetails"]) {
-        [self segueToActivityDetails];
+        [self segueToActivityDetails:segue.destinationViewController];
     }
 }
 
-- (void)segueToActivityDetails {
+- (void)segueToAddActivityProgrammatically {
+    MTAddActivityTableViewController *viewController = [[MTAddActivityTableViewController alloc] init];
+//    viewController.delegate = self;
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+- (void)segueToActivityDetails:(MTActivityDetailsViewController *)destinationViewController {
     
 }
 
@@ -123,5 +120,14 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.tableView) {
+        if (indexPath.row == 0) {
+            [self segueToAddActivityProgrammatically];
+        } else {
+            [self performSegueWithIdentifier:@"SegueToActivityDetails" sender:self];
+        }
+    }
+}
 
 @end
