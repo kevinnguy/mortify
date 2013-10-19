@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D493C7E1812E937000D287A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C7D1812E937000D287A /* Foundation.framework */; };
+		9D493C801812E937000D287A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C7F1812E937000D287A /* CoreGraphics.framework */; };
+		9D493C821812E937000D287A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C811812E937000D287A /* UIKit.framework */; };
+		9D493C881812E937000D287A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D493C861812E937000D287A /* InfoPlist.strings */; };
+		9D493C8A1812E937000D287A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493C891812E937000D287A /* main.m */; };
+		9D493C8E1812E937000D287A /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493C8D1812E937000D287A /* MTAppDelegate.m */; };
+		9D493C911812E937000D287A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D493C8F1812E937000D287A /* Main_iPhone.storyboard */; };
+		9D493C941812E937000D287A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D493C921812E937000D287A /* Main_iPad.storyboard */; };
+		9D493C971812E937000D287A /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493C961812E937000D287A /* MTViewController.m */; };
+		9D493C991812E937000D287A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D493C981812E937000D287A /* Images.xcassets */; };
+		9D493CA01812E937000D287A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C9F1812E937000D287A /* XCTest.framework */; };
+		9D493CA11812E937000D287A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C7D1812E937000D287A /* Foundation.framework */; };
+		9D493CA21812E937000D287A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C811812E937000D287A /* UIKit.framework */; };
+		9D493CAA1812E937000D287A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CA81812E937000D287A /* InfoPlist.strings */; };
+		9D493CAC1812E937000D287A /* MortifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CAB1812E937000D287A /* MortifyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D493CA31812E937000D287A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D493C721812E937000D287A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D493C791812E937000D287A;
+			remoteInfo = Mortify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D493C7A1812E937000D287A /* Mortify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mortify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D493C7D1812E937000D287A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9D493C7F1812E937000D287A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9D493C811812E937000D287A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9D493C851812E937000D287A /* Mortify-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mortify-Info.plist"; sourceTree = "<group>"; };
+		9D493C871812E937000D287A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9D493C891812E937000D287A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D493C8B1812E937000D287A /* Mortify-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mortify-Prefix.pch"; sourceTree = "<group>"; };
+		9D493C8C1812E937000D287A /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		9D493C8D1812E937000D287A /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
+		9D493C901812E937000D287A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		9D493C931812E937000D287A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		9D493C951812E937000D287A /* MTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTViewController.h; sourceTree = "<group>"; };
+		9D493C961812E937000D287A /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
+		9D493C981812E937000D287A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9D493C9E1812E937000D287A /* MortifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MortifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D493C9F1812E937000D287A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9D493CA71812E937000D287A /* MortifyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MortifyTests-Info.plist"; sourceTree = "<group>"; };
+		9D493CA91812E937000D287A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9D493CAB1812E937000D287A /* MortifyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MortifyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D493C771812E937000D287A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493C801812E937000D287A /* CoreGraphics.framework in Frameworks */,
+				9D493C821812E937000D287A /* UIKit.framework in Frameworks */,
+				9D493C7E1812E937000D287A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D493C9B1812E937000D287A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493CA01812E937000D287A /* XCTest.framework in Frameworks */,
+				9D493CA21812E937000D287A /* UIKit.framework in Frameworks */,
+				9D493CA11812E937000D287A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D493C711812E937000D287A = {
+			isa = PBXGroup;
+			children = (
+				9D493C831812E937000D287A /* Mortify */,
+				9D493CA51812E937000D287A /* MortifyTests */,
+				9D493C7C1812E937000D287A /* Frameworks */,
+				9D493C7B1812E937000D287A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D493C7B1812E937000D287A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D493C7A1812E937000D287A /* Mortify.app */,
+				9D493C9E1812E937000D287A /* MortifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D493C7C1812E937000D287A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9D493C7D1812E937000D287A /* Foundation.framework */,
+				9D493C7F1812E937000D287A /* CoreGraphics.framework */,
+				9D493C811812E937000D287A /* UIKit.framework */,
+				9D493C9F1812E937000D287A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D493C831812E937000D287A /* Mortify */ = {
+			isa = PBXGroup;
+			children = (
+				9D493C8C1812E937000D287A /* MTAppDelegate.h */,
+				9D493C8D1812E937000D287A /* MTAppDelegate.m */,
+				9D493C8F1812E937000D287A /* Main_iPhone.storyboard */,
+				9D493C921812E937000D287A /* Main_iPad.storyboard */,
+				9D493C951812E937000D287A /* MTViewController.h */,
+				9D493C961812E937000D287A /* MTViewController.m */,
+				9D493C981812E937000D287A /* Images.xcassets */,
+				9D493C841812E937000D287A /* Supporting Files */,
+			);
+			path = Mortify;
+			sourceTree = "<group>";
+		};
+		9D493C841812E937000D287A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D493C851812E937000D287A /* Mortify-Info.plist */,
+				9D493C861812E937000D287A /* InfoPlist.strings */,
+				9D493C891812E937000D287A /* main.m */,
+				9D493C8B1812E937000D287A /* Mortify-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D493CA51812E937000D287A /* MortifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D493CAB1812E937000D287A /* MortifyTests.m */,
+				9D493CA61812E937000D287A /* Supporting Files */,
+			);
+			path = MortifyTests;
+			sourceTree = "<group>";
+		};
+		9D493CA61812E937000D287A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D493CA71812E937000D287A /* MortifyTests-Info.plist */,
+				9D493CA81812E937000D287A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D493C791812E937000D287A /* Mortify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D493CAF1812E937000D287A /* Build configuration list for PBXNativeTarget "Mortify" */;
+			buildPhases = (
+				9D493C761812E937000D287A /* Sources */,
+				9D493C771812E937000D287A /* Frameworks */,
+				9D493C781812E937000D287A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mortify;
+			productName = Mortify;
+			productReference = 9D493C7A1812E937000D287A /* Mortify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D493C9D1812E937000D287A /* MortifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D493CB21812E937000D287A /* Build configuration list for PBXNativeTarget "MortifyTests" */;
+			buildPhases = (
+				9D493C9A1812E937000D287A /* Sources */,
+				9D493C9B1812E937000D287A /* Frameworks */,
+				9D493C9C1812E937000D287A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D493CA41812E937000D287A /* PBXTargetDependency */,
+			);
+			name = MortifyTests;
+			productName = MortifyTests;
+			productReference = 9D493C9E1812E937000D287A /* MortifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D493C721812E937000D287A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MT;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Kevin Nguy";
+				TargetAttributes = {
+					9D493C9D1812E937000D287A = {
+						TestTargetID = 9D493C791812E937000D287A;
+					};
+				};
+			};
+			buildConfigurationList = 9D493C751812E937000D287A /* Build configuration list for PBXProject "Mortify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D493C711812E937000D287A;
+			productRefGroup = 9D493C7B1812E937000D287A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D493C791812E937000D287A /* Mortify */,
+				9D493C9D1812E937000D287A /* MortifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D493C781812E937000D287A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493C941812E937000D287A /* Main_iPad.storyboard in Resources */,
+				9D493C991812E937000D287A /* Images.xcassets in Resources */,
+				9D493C911812E937000D287A /* Main_iPhone.storyboard in Resources */,
+				9D493C881812E937000D287A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D493C9C1812E937000D287A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493CAA1812E937000D287A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D493C761812E937000D287A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493C8A1812E937000D287A /* main.m in Sources */,
+				9D493C971812E937000D287A /* MTViewController.m in Sources */,
+				9D493C8E1812E937000D287A /* MTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D493C9A1812E937000D287A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D493CAC1812E937000D287A /* MortifyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D493CA41812E937000D287A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D493C791812E937000D287A /* Mortify */;
+			targetProxy = 9D493CA31812E937000D287A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D493C861812E937000D287A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D493C871812E937000D287A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9D493C8F1812E937000D287A /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D493C901812E937000D287A /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		9D493C921812E937000D287A /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D493C931812E937000D287A /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		9D493CA81812E937000D287A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D493CA91812E937000D287A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D493CAD1812E937000D287A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D493CAE1812E937000D287A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D493CB01812E937000D287A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mortify/Mortify-Prefix.pch";
+				INFOPLIST_FILE = "Mortify/Mortify-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9D493CB11812E937000D287A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mortify/Mortify-Prefix.pch";
+				INFOPLIST_FILE = "Mortify/Mortify-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9D493CB31812E937000D287A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mortify.app/Mortify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mortify/Mortify-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MortifyTests/MortifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9D493CB41812E937000D287A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Mortify.app/Mortify";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mortify/Mortify-Prefix.pch";
+				INFOPLIST_FILE = "MortifyTests/MortifyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D493C751812E937000D287A /* Build configuration list for PBXProject "Mortify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D493CAD1812E937000D287A /* Debug */,
+				9D493CAE1812E937000D287A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D493CAF1812E937000D287A /* Build configuration list for PBXNativeTarget "Mortify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D493CB01812E937000D287A /* Debug */,
+				9D493CB11812E937000D287A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9D493CB21812E937000D287A /* Build configuration list for PBXNativeTarget "MortifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D493CB31812E937000D287A /* Debug */,
+				9D493CB41812E937000D287A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D493C721812E937000D287A /* Project object */;
+}

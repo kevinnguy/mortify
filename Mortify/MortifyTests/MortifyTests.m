@@ -1,0 +1,34 @@
+//
+//  MortifyTests.m
+//  MortifyTests
+//
+//  Created by America on 10/19/13.
+//  Copyright (c) 2013 Kevin Nguy. All rights reserved.
+//
+
+#import <XCTest/XCTest.h>
+
+@interface MortifyTests : XCTestCase
+
+@end
+
+@implementation MortifyTests
+
+- (void)setUp
+{
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
+
+- (void)tearDown
+{
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
+
+- (void)testExample
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
+
+@end
