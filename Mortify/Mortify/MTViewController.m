@@ -169,8 +169,14 @@
         
         if (indexPath.row == 0) {
             cell.microMortLabel.text = @"";
-            self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
-            [cell.microMortLabel addSubview:self.imageView];
+
+            UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(cell.microMortLabel.frame), 30)];
+            label.textColor = cell.microMortLabel.textColor;
+            label.textAlignment = NSTextAlignmentCenter;
+            label.font = [UIFont helveticaNeueThinWithSize:36.0f];
+            label.text = @"+";
+            
+            [cell.microMortLabel addSubview:label];
         } else {
             if (activity.score > 0) {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
