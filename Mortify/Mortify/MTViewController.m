@@ -179,7 +179,14 @@
 
 #pragma mark - MTAddActivityDelegate
 - (void)didAddActivity:(MTActivity *)activity {
+    self.activityLogMutableArray = [[[self.activityLogMutableArray reverseObjectEnumerator] allObjects] mutableCopy];
+    [self.activityLogMutableArray removeLastObject];
     [self.activityLogMutableArray addObject:activity];
+    
+    MTActivity *addActivity = [[MTActivity alloc] initWithActivity:@"Add Activity" score:0];
+    [self.activityLogMutableArray addObject:addActivity];
+    self.activityLogMutableArray = [[[self.activityLogMutableArray reverseObjectEnumerator] allObjects] mutableCopy];
+    
     [self.tableView reloadData];
 }
 
