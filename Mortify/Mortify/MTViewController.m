@@ -56,15 +56,7 @@
 }
 
 - (void)setupNavigationBar {
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:17.0f];
-    titleLabel.text = @"Home";
-    
-    UIView *titleView = [[UIView alloc] initWithFrame:titleLabel.frame];
-    [titleView addSubview:titleLabel];
-    self.navigationItem.titleView = titleView;
+    self.navigationItem.title = @"Home";
 }
 
 - (void)setupTableView {
