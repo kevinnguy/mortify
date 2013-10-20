@@ -8,12 +8,17 @@
 
 #import "MTAppDelegate.h"
 
+#import "KGStatusBar.h"
+
 @implementation MTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
     [self setupAppearance];
+    
+    // Show time of life
+    [KGStatusBar showStatusForever:@"63 years and 123 days left"];
     
     return YES;
 }

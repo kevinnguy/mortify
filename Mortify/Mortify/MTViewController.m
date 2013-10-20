@@ -59,6 +59,7 @@
 
 - (void)setupNavigationBar {
     self.navigationItem.title = @"Home";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Update" style:UIBarButtonItemStyleBordered target:self action:@selector(updateBarButtonPressed:)];
 }
 
 - (void)setupTableView {
@@ -69,27 +70,38 @@
 }
 
 - (void)setupTimerView {
-    // Timer Scroll View
-    int numberOfPages = 4;
-    self.timerScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(self.timerView.frame))];
-    self.timerScrollView.contentSize = CGSizeMake(CGRectGetWidth(self.tableView.frame) * numberOfPages, CGRectGetHeight(self.timerView.frame));
-    
-    self.timerPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake((CGRectGetWidth(self.timerScrollView.frame)/2) - 30, CGRectGetHeight(self.timerScrollView.frame) - 30, 30 * 2, 30)];
-    self.timerPageControl.numberOfPages = numberOfPages;
-    self.timerPageControl.currentPage = 1;
-
-    
-    self.countdownTimer = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, CGRectGetWidth(self.timerScrollView.frame) - 30 - 30, 80)];
-    self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:56.0f];
+    int padding = 12;
+    self.countdownTimer = [[UILabel alloc] initWithFrame:CGRectMake(padding, padding, CGRectGetWidth(self.timerView.frame) - padding - padding, CGRectGetHeight(self.timerView.frame) - padding)];
+//    self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:62.0f];
+    self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:22.0f];
     self.countdownTimer.textAlignment = NSTextAlignmentCenter;
     self.countdownTimer.textColor = [UIColor whiteColor];
-    self.countdownTimer.text = @"13:35:23";
     
-    [self.timerScrollView addSubview:self.countdownTimer];
+    NSDate *currentDate = [NSDate date];
+    NSDateComponents *currentDateComponents = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:currentDate];
+    NSDateComponents *currentDateToMidnight = [[NSDateComponents alloc] init];
+    [currentDateToMidnight setHour:-[currentDateComponents hour]];
+    [currentDateToMidnight setMinute:-[currentDateComponents minute]];
+    [currentDateToMidnight setSecond:-[currentDateComponents second]];
+    NSDate *midnight = [[NSCalendar currentCalendar] dateByAddingComponents:currentDateToMidnight toDate:currentDate options:0];
+    NSTimeInterval todayTimeInterval = [midnight timeIntervalSince1970];
+    self.countdownTimer.text = [self stringFromTimeInterval:todayTimeInterval];
     
     self.timerView.backgroundColor = [UIColor blackBackgroundColor];
-    [self.timerView addSubview:self.timerScrollView];
-    [self.timerView addSubview:self.timerPageControl];
+    [self.timerView addSubview:self.countdownTimer];
+}
+
+- (void)updateBarButtonPressed:(id)sender {
+    
+}
+
+#pragma mark - Timer
+- (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
+    NSInteger ti = (NSInteger)interval;
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = (ti / 3600);
+    return [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
 }
 
 #pragma mark - Prepare segue

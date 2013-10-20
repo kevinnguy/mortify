@@ -95,13 +95,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="Td7-Zw-Nay">
-                                    <rect key="frame" x="0.0" y="64" width="320" height="150"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="120"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="mTs-XL-CVE" rowHeight="60" style="IBUITableViewCellStyleDefault" id="u0I-Yk-5h9">
-                                        <rect key="frame" x="0.0" y="215" width="320" height="60"/>
+                                        <rect key="frame" x="0.0" y="185" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u0I-Yk-5h9" id="3Xy-s8-4mW">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
