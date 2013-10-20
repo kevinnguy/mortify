@@ -22,6 +22,8 @@
 
 @property (nonatomic, strong) MTActivity *selectedActivity;
 @property (nonatomic) int selectedActivityLogArrayIndex;
+
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 
@@ -134,9 +136,8 @@
         
         if (indexPath.row == 0) {
             cell.microMortLabel.text = @"";
-            UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
-            cell.microMortLabel.backgroundColor = [UIColor redColor];
-            [cell.microMortLabel addSubview:imageView];
+            self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
+            [cell.microMortLabel addSubview:self.imageView];
         } else {
             if (activity.score > 0) {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
