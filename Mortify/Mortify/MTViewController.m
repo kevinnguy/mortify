@@ -39,12 +39,12 @@
 }
 
 - (void)setupTabBar {
-    [self.tabBarController.tabBar.items[0] setTitle:@"Stats"];
-    [self.tabBarController.tabBar.items[1] setTitle:@"Home"];
+    [self.tabBarController.tabBar.items[0] setTitle:@"Home"];
+    [self.tabBarController.tabBar.items[1] setTitle:@"Stats"];
     [self.tabBarController.tabBar.items[2] setTitle:@"Social"];
     
-    [[self.tabBarController.tabBar.items objectAtIndex:0] setImage:[UIImage imageNamed:@"stats-icon.png"]];
-    [[self.tabBarController.tabBar.items objectAtIndex:1] setImage:[UIImage imageNamed:@"home-icon.png"]];
+    [[self.tabBarController.tabBar.items objectAtIndex:0] setImage:[UIImage imageNamed:@"home-icon.png"]];
+    [[self.tabBarController.tabBar.items objectAtIndex:1] setImage:[UIImage imageNamed:@"stats-icon.png"]];
     [[self.tabBarController.tabBar.items objectAtIndex:2] setImage:[UIImage imageNamed:@"social-icon.png"]];
 }
 

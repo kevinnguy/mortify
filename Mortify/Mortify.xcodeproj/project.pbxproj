@@ -30,6 +30,9 @@
 		9D493CCB18133DA2000D287A /* UIFont+Mortify.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CCA18133DA2000D287A /* UIFont+Mortify.m */; };
 		9D493CCE18134082000D287A /* MTActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CCD18134082000D287A /* MTActivity.m */; };
 		9D493CD2181351FF000D287A /* plus-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CD1181351FF000D287A /* plus-icon@2x.png */; };
+		9D493CDC18136A2C000D287A /* home-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CD918136A2C000D287A /* home-icon@2x.png */; };
+		9D493CDD18136A2C000D287A /* social-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDA18136A2C000D287A /* social-icon@2x.png */; };
+		9D493CDE18136A2C000D287A /* stats-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDB18136A2C000D287A /* stats-icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		9D493CCC18134082000D287A /* MTActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActivity.h; sourceTree = "<group>"; };
 		9D493CCD18134082000D287A /* MTActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActivity.m; sourceTree = "<group>"; };
 		9D493CD1181351FF000D287A /* plus-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus-icon@2x.png"; sourceTree = "<group>"; };
+		9D493CD918136A2C000D287A /* home-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon@2x.png"; sourceTree = "<group>"; };
+		9D493CDA18136A2C000D287A /* social-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-icon@2x.png"; sourceTree = "<group>"; };
+		9D493CDB18136A2C000D287A /* stats-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats-icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,9 @@
 		9D493C711812E937000D287A = {
 			isa = PBXGroup;
 			children = (
+				9D493CD918136A2C000D287A /* home-icon@2x.png */,
+				9D493CDA18136A2C000D287A /* social-icon@2x.png */,
+				9D493CDB18136A2C000D287A /* stats-icon@2x.png */,
 				9D493CD1181351FF000D287A /* plus-icon@2x.png */,
 				9D493C831812E937000D287A /* Mortify */,
 				9D493CA51812E937000D287A /* MortifyTests */,
@@ -272,8 +281,11 @@
 			files = (
 				9D493C941812E937000D287A /* Main_iPad.storyboard in Resources */,
 				9D493C991812E937000D287A /* Images.xcassets in Resources */,
+				9D493CDD18136A2C000D287A /* social-icon@2x.png in Resources */,
+				9D493CDE18136A2C000D287A /* stats-icon@2x.png in Resources */,
 				9D493C911812E937000D287A /* Main_iPhone.storyboard in Resources */,
 				9D493CD2181351FF000D287A /* plus-icon@2x.png in Resources */,
+				9D493CDC18136A2C000D287A /* home-icon@2x.png in Resources */,
 				9D493C881812E937000D287A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
