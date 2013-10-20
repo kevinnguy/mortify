@@ -11,5 +11,5 @@
 @interface MTActivityCell : UITableViewCell
 @property (nonatomic, strong) UILabel *microMortLabel;
 @property (nonatomic, strong) UILabel *activityLabel;
-
+@property (nonatomic, strong) UILabel *timestampLabel;
 @end
