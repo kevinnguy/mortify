@@ -36,6 +36,12 @@
     
     MTActivity *addActivity = [[MTActivity alloc] initWithActivity:@"Add Activity" score:0];
     self.activityLogMutableArray = [@[addActivity] mutableCopy];
+//    [self setNeedsStatusBarAppearanceUpdate];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)setupTabBar {
