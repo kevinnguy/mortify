@@ -31,7 +31,7 @@
 }
 
 + (UIColor *)orangeMortifyColor {
-    return [UIColor colorWithRed:230.0f/255.0f green:133.0f/255.0f blue:133.0f/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:244.0f/255.0f green:160.0f/255.0f blue:146.0f/255.0f alpha:1.0f];
 }
 
 @end
