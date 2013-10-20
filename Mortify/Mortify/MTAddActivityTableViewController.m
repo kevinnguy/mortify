@@ -106,11 +106,13 @@
     if (activity.score > 0) {
         cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
         cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
-        cell.microMortLabel.backgroundColor = [UIColor greenMortifyColor];
+        cell.microMortLabel.textColor = [UIColor greenMortifyColor];
+//        cell.microMortLabel.backgroundColor = [UIColor greenMortifyColor];
     } else {
         cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
-        cell.microMortLabel.backgroundColor = [UIColor orangeMortifyColor];
+        cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
+//        cell.microMortLabel.backgroundColor = [UIColor orangeMortifyColor];
     }
     
     return cell;
