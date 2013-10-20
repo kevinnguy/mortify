@@ -10,6 +10,7 @@
 
 @interface MTActivityDetailsViewController () <UINavigationControllerDelegate>
 @property (nonatomic) float selectedScore;
+@property (nonatomic) MTActivity *selectedActivity;
 
 // Details Row
 @property (nonatomic, strong) UILabel *scoreLabel;
@@ -40,6 +41,10 @@
     self.selectedScore = self.activity.score;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.delegate didChangeScore:self.selectedScore atRowIndex:self.activityLogArrayIndex];
+}
+
 - (void)setupTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -62,7 +67,6 @@
         self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.activity.score * -1];
     }
     self.scoreLabel.layer.borderColor = self.scoreLabel.backgroundColor.CGColor;
-
     
     self.activityNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(20 + CGRectGetWidth(self.scoreLabel.frame) + 10, 20, CGRectGetWidth(self.view.frame) - 20 - CGRectGetWidth(self.scoreLabel.frame) - 10, CGRectGetHeight(self.scoreLabel.frame))];
     self.activityNameLabel.font = [UIFont helveticaNeueThinWithSize:40.0f];
@@ -90,8 +94,6 @@
     } else {
         self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.selectedScore * -1];
     }
-    
-
 }
 
 #pragma mark - UITableView delegates

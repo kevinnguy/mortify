@@ -41,7 +41,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle{
+- (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
 
@@ -187,6 +187,7 @@
     activity.score = score;
     
     [self.activityLogMutableArray setObject:activity atIndexedSubscript:index];
+    [self.tableView reloadData];
 }
 
 @end
