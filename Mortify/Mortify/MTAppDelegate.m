@@ -53,6 +53,7 @@
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     navigationBar.barTintColor = [UIColor blackNavigationBarColor];
     navigationBar.tintColor = [UIColor redMortifyColor];
+    [navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     
     UITableView *tableView = [UITableView appearance];
     tableView.backgroundColor = [UIColor blackBackgroundColor];
