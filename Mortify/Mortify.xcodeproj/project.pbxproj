@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0B9C1618137AAB0015D00B /* stats-page.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D0B9C1518137AAB0015D00B /* stats-page.png */; };
 		9D493C7E1812E937000D287A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C7D1812E937000D287A /* Foundation.framework */; };
 		9D493C801812E937000D287A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C7F1812E937000D287A /* CoreGraphics.framework */; };
 		9D493C821812E937000D287A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D493C811812E937000D287A /* UIKit.framework */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D0B9C1518137AAB0015D00B /* stats-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats-page.png"; sourceTree = "<group>"; };
 		9D493C7A1812E937000D287A /* Mortify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mortify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D493C7D1812E937000D287A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9D493C7F1812E937000D287A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 		9D493C711812E937000D287A = {
 			isa = PBXGroup;
 			children = (
+				4D0B9C1518137AAB0015D00B /* stats-page.png */,
 				9D493CD918136A2C000D287A /* home-icon@2x.png */,
 				9D493CDA18136A2C000D287A /* social-icon@2x.png */,
 				9D493CDB18136A2C000D287A /* stats-icon@2x.png */,
@@ -279,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0B9C1618137AAB0015D00B /* stats-page.png in Resources */,
 				9D493C941812E937000D287A /* Main_iPad.storyboard in Resources */,
 				9D493C991812E937000D287A /* Images.xcassets in Resources */,
 				9D493CDD18136A2C000D287A /* social-icon@2x.png in Resources */,

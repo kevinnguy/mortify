@@ -15,5 +15,6 @@
 + (UIColor *)redMortifyColor;
 + (UIColor *)greenMortifyColor;
 + (UIColor *)orangeMortifyColor;
++ (UIColor *)blueMortifyColor;
 
 @end

@@ -135,6 +135,7 @@
         if (indexPath.row == 0) {
             cell.microMortLabel.text = @"";
             UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
+            cell.microMortLabel.backgroundColor = [UIColor redColor];
             [cell.microMortLabel addSubview:imageView];
         } else {
             if (activity.score > 0) {
@@ -149,7 +150,7 @@
                 cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
             }
             
-            cell.microMortLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+//            cell.microMortLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
         }
         
         
