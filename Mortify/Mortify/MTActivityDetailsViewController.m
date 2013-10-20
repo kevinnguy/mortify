@@ -309,8 +309,8 @@
                     cell.microMortLabel.font = [UIFont helveticaNeueThinWithSize:16.0f];
                 }
                 
-                cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
-                cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
+                cell.microMortLabel.layer.borderColor = [UIColor blueMortifyColor].CGColor;
+                cell.microMortLabel.textColor = [UIColor blueMortifyColor];
             }
             
             return cell;
