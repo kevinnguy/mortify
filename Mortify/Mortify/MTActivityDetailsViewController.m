@@ -313,28 +313,28 @@
             if (indexPath.section == RISK_ROW) {
                 if (self.scoreStepper.value >= 3) {
                     if (indexPath.row == 0) {
-                        cell.activityLabel.text = @"Smoking - 1 cigarette";
-                        cell.microMortLabel.text = @"0.7";
+                        cell.activityLabel.text = @"Driving - 3 hours";
+                        cell.microMortLabel.text = @"0.9";
                         
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     } else if (indexPath.row == 1) {
-                        cell.activityLabel.text = @"Skydiving - 1 time";
-                        cell.microMortLabel.text = @"0.7";
+                        cell.activityLabel.text = @"Ecstasy - 1 time";
+                        cell.microMortLabel.text = @"0.5";
                         
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     } else if (indexPath.row == 2) {
-                        cell.activityLabel.text = @"Exercise - 20 minutes";
-                        cell.microMortLabel.text = @"1.0";
+                        cell.activityLabel.text = @"Smoking - 1 cigarette";
+                        cell.microMortLabel.text = @"0.7";
 
-                        cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
-                        cell.microMortLabel.textColor = [UIColor greenMortifyColor];
+                        cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
+                        cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     }
                 } else if (self.scoreStepper.value >= 2) {
                     if (indexPath.row == 0) {
-                        cell.activityLabel.text = @"Driving - 40 minutes";
-                        cell.microMortLabel.text = @"0.2";
+                        cell.activityLabel.text = @"Driving - 80 minutes";
+                        cell.microMortLabel.text = @"0.4";
                         
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
@@ -345,31 +345,31 @@
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     } else if (indexPath.row == 2) {
-                        cell.activityLabel.text = @"Coffee - 1 cup";
-                        cell.microMortLabel.text = @"1.0";
+                        cell.activityLabel.text = @"Sitting - 6 hour";
+                        cell.microMortLabel.text = @"0.6";
                         
-                        cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
-                        cell.microMortLabel.textColor = [UIColor greenMortifyColor];
+                        cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
+                        cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     }
                 } else if (self.scoreStepper.value >= 1) {
                     if (indexPath.row == 0) {
-                        cell.activityLabel.text = @"Driving - 20 minutes";
+                        cell.activityLabel.text = @"Driving -  20 minutes";
                         cell.microMortLabel.text = @"0.1";
                         
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
                     } else if (indexPath.row == 1) {
+                        cell.activityLabel.text = @"Ecstacy - 1 time";
+                        cell.microMortLabel.text = @"0.5";
+                        
+                        cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
+                        cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
+                    } else if (indexPath.row == 2) {
                         cell.activityLabel.text = @"Sitting - 1 hour";
                         cell.microMortLabel.text = @"0.1";
                         
                         cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                         cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
-                    } else if (indexPath.row == 2) {
-                        cell.activityLabel.text = @"Eating fruits/vegetables - 1 serving";
-                        cell.microMortLabel.text = @"0.2";
-                        
-                        cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
-                        cell.microMortLabel.textColor = [UIColor greenMortifyColor];
                     }
                 }
             } else if (indexPath.section == SOCIAL) {
