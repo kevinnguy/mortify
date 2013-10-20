@@ -29,13 +29,13 @@
     self.searchResultsMutableArray = [[NSMutableArray alloc] init];
     
     self.searchResultsMutableArray = [@[[[MTActivity alloc] initWithActivity:@"Smoking" score:-0.7],
-                                       [[MTActivity alloc] initWithActivity:@"Driving" score:-0.3],
-                                       [[MTActivity alloc] initWithActivity:@"Biking" score:-0.8],
+                                       [[MTActivity alloc] initWithActivity:@"Driving" score:-0.1],
+                                       [[MTActivity alloc] initWithActivity:@"Biking" score:-0.3],
                                        [[MTActivity alloc] initWithActivity:@"Skydiving" score:-7.0],
                                        [[MTActivity alloc] initWithActivity:@"Ecstasy" score:-0.5],
                                        [[MTActivity alloc] initWithActivity:@"Coffee" score:1.0],
                                        [[MTActivity alloc] initWithActivity:@"Exercise" score:1.0],
-                                       [[MTActivity alloc] initWithActivity:@"Sitting" score:-0.2],
+                                       [[MTActivity alloc] initWithActivity:@"Sitting" score:-0.1],
                                         [[MTActivity alloc] initWithActivity:@"Eating fruits/vegetables" score:0.2],
                                        ] mutableCopy];
     

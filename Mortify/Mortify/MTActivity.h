@@ -10,6 +10,7 @@
 
 @interface MTActivity : NSObject
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic) float baseScore;
 @property (nonatomic) float score;
 
 - (id)initWithActivity:(NSString *)name score:(float)score;

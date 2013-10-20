@@ -16,6 +16,7 @@
     }
     
     self.name = name;
+    self.baseScore = score;
     self.score = score;
     
     return self;
