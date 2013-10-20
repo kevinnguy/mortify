@@ -9,9 +9,6 @@
 #import "MTActivityDetailsViewController.h"
 
 @interface MTActivityDetailsViewController () <UINavigationControllerDelegate>
-@property (nonatomic) float selectedScore;
-@property (nonatomic) MTActivity *selectedActivity;
-
 // Details Row
 @property (nonatomic, strong) UILabel *scoreLabel;
 @property (nonatomic, strong) UILabel *activityNameLabel;
@@ -37,12 +34,10 @@
 
     [self setupViews];
     [self setupTableView];
-    
-    self.selectedScore = self.activity.score;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.delegate didChangeScore:self.selectedScore atRowIndex:self.activityLogArrayIndex];
+    [self.delegate didChangeScore:self.activity.score atRowIndex:self.activityLogArrayIndex];
 }
 
 - (void)setupTableView {
@@ -82,17 +77,90 @@
     self.scoreCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(20 + CGRectGetWidth(self.scoreStepper.frame) + 10, CGRectGetHeight(self.scoreLabel.frame) + 40, CGRectGetWidth(self.view.frame) - 20 - CGRectGetWidth(self.scoreStepper.frame), 40)];
     self.scoreCountLabel.font = [UIFont helveticaNeueThinWithSize:28.0f];
     self.scoreCountLabel.textColor = [UIColor whiteColor];
-    self.scoreCountLabel.text = @"1 cigarette";
+
+    // Match score count label with activity
+    float value = self.activity.score / self.activity.baseScore;
+    
+    if ([self.activity.name isEqualToString:@"Smoking"]) {
+        self.scoreCountLabel.text = @"1 cigarette";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f cigarettes", value];
+            self.scoreStepper.value = value;
+        }
+    } else if ([self.activity.name isEqualToString:@"Skydiving"] || [self.activity.name isEqualToString:@"Ecstasy"]) {
+        self.scoreCountLabel.text = @"1 time";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f times", value];
+            self.scoreStepper.value = value;
+        }
+    } else if ([self.activity.name isEqualToString:@"Coffee"]) {
+        self.scoreCountLabel.text = @"1 cup";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f cups", value];
+            self.scoreStepper.value = value;
+        }
+    } else if ([self.activity.name isEqualToString:@"Exercise"] || [self.activity.name isEqualToString:@"Biking"] || [self.activity.name isEqualToString:@"Driving"]) {
+        self.scoreCountLabel.text = @"20 minutes";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f minutes", value * 20];
+            self.scoreStepper.value = value;
+        }
+    } else if ([self.activity.name isEqualToString:@"Sitting"]) {
+        self.scoreCountLabel.text = @"1 hour";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f hours", value];
+            self.scoreStepper.value = value;
+        }
+    } else if ([self.activity.name isEqualToString:@"Eating fruits/vegetables"]) {
+        self.scoreCountLabel.text = @"1 serving";
+        if (value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f servings", value];
+            self.scoreStepper.value = value;
+        }
+    }
+
 }
 
 #pragma mark - Button Pressed
 - (void)scoreStepperPressed:(UIStepper *)sender {
-    self.selectedScore = self.activity.score * sender.value;
+    self.activity.score = self.activity.baseScore * sender.value;
     
     if (self.activity.score > 0) {
-        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.selectedScore];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.activity.score];
     } else {
-        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.selectedScore * -1];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.activity.score * -1];
+    }
+    
+    if ([self.activity.name isEqualToString:@"Smoking"]) {
+        self.scoreCountLabel.text = @"1 cigarette";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f cigarettes", sender.value];
+        }
+    } else if ([self.activity.name isEqualToString:@"Skydiving"] || [self.activity.name isEqualToString:@"Ecstasy"]) {
+        self.scoreCountLabel.text = @"1 time";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f times", sender.value];
+        }
+    } else if ([self.activity.name isEqualToString:@"Coffee"]) {
+        self.scoreCountLabel.text = @"1 cup";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f cups", sender.value];
+        }
+    } else if ([self.activity.name isEqualToString:@"Exercise"] || [self.activity.name isEqualToString:@"Biking"] || [self.activity.name isEqualToString:@"Driving"]) {
+        self.scoreCountLabel.text = @"20 minutes";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f minutes", sender.value * 20];
+        }
+    } else if ([self.activity.name isEqualToString:@"Sitting"]) {
+        self.scoreCountLabel.text = @"1 hour";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f hours", sender.value];
+        }
+    } else if ([self.activity.name isEqualToString:@"Eating fruits/vegetables"]) {
+        self.scoreCountLabel.text = @"1 serving";
+        if (sender.value > 1) {
+            self.scoreCountLabel.text = [NSString stringWithFormat:@"%.0f servings", sender.value];
+        }
     }
 }
 
