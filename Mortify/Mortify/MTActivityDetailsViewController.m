@@ -8,7 +8,9 @@
 
 #import "MTActivityDetailsViewController.h"
 
-@interface MTActivityDetailsViewController ()
+@interface MTActivityDetailsViewController () <UINavigationControllerDelegate>
+@property (nonatomic) float selectedScore;
+
 // Details Row
 @property (nonatomic, strong) UILabel *scoreLabel;
 @property (nonatomic, strong) UILabel *activityNameLabel;
@@ -34,6 +36,8 @@
 
     [self setupViews];
     [self setupTableView];
+    
+    self.selectedScore = self.activity.score;
 }
 
 - (void)setupTableView {
@@ -44,7 +48,7 @@
 - (void)setupViews {
     // Details Row
     self.scoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 20, 50, 50)];
-    self.scoreLabel.font = [UIFont helveticaNeueThinWithSize:24.0f];
+    self.scoreLabel.font = [UIFont helveticaNeueThinWithSize:20.0f];
     self.scoreLabel.textAlignment = NSTextAlignmentCenter;
     self.scoreLabel.textColor = [UIColor blackBackgroundColor];
     self.scoreLabel.layer.borderWidth = 1.0f;
@@ -79,13 +83,15 @@
 
 #pragma mark - Button Pressed
 - (void)scoreStepperPressed:(UIStepper *)sender {
-    self.activity.score *= sender.value;
+    self.selectedScore = self.activity.score * sender.value;
     
     if (self.activity.score > 0) {
-        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.activity.score];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.selectedScore];
     } else {
-        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.activity.score * -1];
+        self.scoreLabel.text = [NSString stringWithFormat:@"%0.1f", self.selectedScore * -1];
     }
+    
+
 }
 
 #pragma mark - UITableView delegates

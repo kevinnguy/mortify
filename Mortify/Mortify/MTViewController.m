@@ -13,7 +13,7 @@
 #import "MTActivityCell.h"
 #import "MTActivity.h"
 
-@interface MTViewController () <MTAddActivityDelegate>
+@interface MTViewController () <MTAddActivityDelegate, MTActivityDetailsDelegate>
 @property (nonatomic, strong) NSMutableArray *activityLogMutableArray;
 
 @property (nonatomic, strong) UIScrollView *timerScrollView;
@@ -21,6 +21,7 @@
 @property (nonatomic, strong) UIPageControl *timerPageControl;
 
 @property (nonatomic, strong) MTActivity *selectedActivity;
+@property (nonatomic) int selectedActivityLogArrayIndex;
 @end
 
 
@@ -55,9 +56,15 @@
 }
 
 - (void)setupNavigationBar {
-    self.navigationItem.title = @"Home View";
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Red Button" style:UIBarButtonItemStyleBordered target:self action:nil];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:17.0f];
+    titleLabel.text = @"Home";
+    
+    UIView *titleView = [[UIView alloc] initWithFrame:titleLabel.frame];
+    [titleView addSubview:titleLabel];
+    self.navigationItem.titleView = titleView;
 }
 
 - (void)setupTableView {
@@ -106,7 +113,9 @@
 }
 
 - (void)segueToActivityDetails:(MTActivityDetailsViewController *)destinationViewController {
+    destinationViewController.delegate = self;
     destinationViewController.activity = self.selectedActivity;
+    destinationViewController.activityLogArrayIndex = self.selectedActivityLogArrayIndex;
 }
 
 #pragma mark - UITableView delegates
@@ -164,6 +173,7 @@
             [self segueToAddActivityProgrammatically];
         } else {
             self.selectedActivity = self.activityLogMutableArray[indexPath.row];
+            self.selectedActivityLogArrayIndex = indexPath.row;
             [self performSegueWithIdentifier:@"SegueToActivityDetails" sender:self];
         }
     }
@@ -175,6 +185,14 @@
 - (void)didAddActivity:(MTActivity *)activity {
     [self.activityLogMutableArray addObject:activity];
     [self.tableView reloadData];
+}
+
+#pragma mark - MTActivityDetailsDelegate
+- (void)didChangeScore:(float)score atRowIndex:(int)index {
+    MTActivity *activity = self.activityLogMutableArray[index];
+    activity.score = score;
+    
+    [self.activityLogMutableArray setObject:activity atIndexedSubscript:index];
 }
 
 @end
