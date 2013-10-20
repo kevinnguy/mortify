@@ -34,6 +34,7 @@
 		9D493CDC18136A2C000D287A /* home-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CD918136A2C000D287A /* home-icon@2x.png */; };
 		9D493CDD18136A2C000D287A /* social-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDA18136A2C000D287A /* social-icon@2x.png */; };
 		9D493CDE18136A2C000D287A /* stats-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDB18136A2C000D287A /* stats-icon@2x.png */; };
+		9D493CE1181394B8000D287A /* MTSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CE0181394B8000D287A /* MTSocialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		9D493CD918136A2C000D287A /* home-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-icon@2x.png"; sourceTree = "<group>"; };
 		9D493CDA18136A2C000D287A /* social-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "social-icon@2x.png"; sourceTree = "<group>"; };
 		9D493CDB18136A2C000D287A /* stats-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats-icon@2x.png"; sourceTree = "<group>"; };
+		9D493CDF181394B8000D287A /* MTSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSocialViewController.h; sourceTree = "<group>"; };
+		9D493CE0181394B8000D287A /* MTSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSocialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,16 +165,18 @@
 				9D493CC41813104E000D287A /* MTAddActivityTableViewController.m */,
 				9D493CC618133262000D287A /* MTUserViewController.h */,
 				9D493CC718133262000D287A /* MTUserViewController.m */,
+				9D493CDF181394B8000D287A /* MTSocialViewController.h */,
+				9D493CE0181394B8000D287A /* MTSocialViewController.m */,
+				9D493CCC18134082000D287A /* MTActivity.h */,
+				9D493CCD18134082000D287A /* MTActivity.m */,
 				9D493CB71812F084000D287A /* MTActivityCell.h */,
 				9D493CB81812F084000D287A /* MTActivityCell.m */,
 				9D493CBA1812FCD8000D287A /* UIColor+Mortify.h */,
 				9D493CBB1812FCD8000D287A /* UIColor+Mortify.m */,
-				9D493C981812E937000D287A /* Images.xcassets */,
-				9D493C841812E937000D287A /* Supporting Files */,
 				9D493CC918133DA2000D287A /* UIFont+Mortify.h */,
 				9D493CCA18133DA2000D287A /* UIFont+Mortify.m */,
-				9D493CCC18134082000D287A /* MTActivity.h */,
-				9D493CCD18134082000D287A /* MTActivity.m */,
+				9D493C981812E937000D287A /* Images.xcassets */,
+				9D493C841812E937000D287A /* Supporting Files */,
 			);
 			path = Mortify;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D493CC818133262000D287A /* MTUserViewController.m in Sources */,
+				9D493CE1181394B8000D287A /* MTSocialViewController.m in Sources */,
 				9D493C8A1812E937000D287A /* main.m in Sources */,
 				9D493CBF1813092D000D287A /* MTActivityDetailsViewController.m in Sources */,
 				9D493CB91812F084000D287A /* MTActivityCell.m in Sources */,

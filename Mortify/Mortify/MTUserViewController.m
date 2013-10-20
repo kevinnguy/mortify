@@ -31,6 +31,18 @@
 //    [self.view addSubview:imageView];
 //    self.view.backgroundColor = [UIColor redColor];
     self.view.backgroundColor = [UIColor blackBackgroundColor];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stats-page.png"]];
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
+    scrollView.contentSize = CGSizeMake(CGRectGetWidth(imageView.frame), CGRectGetHeight(imageView.frame));
+    [scrollView addSubview:imageView];
+    [self.view addSubview:scrollView];
+    
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+   
 }
 
 - (void)didReceiveMemoryWarning
