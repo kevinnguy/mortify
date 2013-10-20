@@ -8,16 +8,20 @@
 
 #import "MTActivityDetailsViewController.h"
 
+#import "MTActivityCell.h"
+
 @interface MTActivityDetailsViewController () <UINavigationControllerDelegate>
 // Details Row
 @property (nonatomic, strong) UILabel *scoreLabel;
 @property (nonatomic, strong) UILabel *activityNameLabel;
 @property (nonatomic, strong) UIStepper *scoreStepper;
 @property (nonatomic, strong) UILabel *scoreCountLabel;
-// Risk Row
 
+// Risk Row
+@property (nonatomic, strong) NSMutableArray *riskActivitiesMutableArray;
 
 // Social Row
+@property (nonatomic, strong) NSMutableArray *socialMutableArray;
 
 @end
 
@@ -34,10 +38,16 @@
 
     [self setupViews];
     [self setupTableView];
+    
+    self.riskActivitiesMutableArray = [@[[[MTActivity alloc] initWithActivity:@"Driving" score:-0.1],
+                                         [[MTActivity alloc] initWithActivity:@"Ecstacy" score:-0.3],
+                                         [[MTActivity alloc] initWithActivity:@"Coffee" score:0.1]
+                                         ] mutableCopy];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [self.delegate didChangeScore:self.activity.score atRowIndex:self.activityLogArrayIndex];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)setupTableView {
@@ -165,21 +175,72 @@
 }
 
 #pragma mark - UITableView delegates
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSString *title = @"";
+    
+    switch (section) {
+        case DETAILS_ROW:
+            break;
+          
+        case RISK_ROW:
+            title = @"Risks you can take";
+            break;
+            
+        case SOCIAL:
+            title = @"Social";
+            break;
+            
+        default:
+            break;
+    }
+    
+    return title;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    int rows = 0;
+    
+    if (tableView == self.tableView) {
+        switch (section) {
+            case DETAILS_ROW:
+                rows = 1;
+                break;
+                
+            case RISK_ROW:
+                rows = 3;
+                break;
+             
+            case SOCIAL:
+                rows = 3;
+                break;
+                
+            default:
+                break;
+        }
+    }
+    
+    return rows;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     int height = 0;
     
     if (tableView == self.tableView) {
-        switch (indexPath.row) {
-            case 0:
+        switch (indexPath.section) {
+            case DETAILS_ROW:
                 height = 150;
                 break;
             
-            case 1:
-                height = 150;
+            case RISK_ROW:
+                height = 60;
+                break;
+             
+            case SOCIAL:
+                height = 60;
                 break;
                 
             default:
@@ -192,38 +253,68 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (tableView == self.tableView) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
-        
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
-        }
-        
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = [UIColor clearColor];
-        
-        switch (indexPath.row) {
-            case 0:{
-                [cell addSubview:self.scoreLabel];
-                [cell addSubview:self.activityNameLabel];
-                [cell addSubview:self.scoreStepper];
-                [cell addSubview:self.scoreCountLabel];
-                break;
+        if (indexPath.section == DETAILS_ROW) {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
+            
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
             }
-                
-            case 1:{
-                
-                break;
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            cell.backgroundColor = [UIColor clearColor];
+            
+            [cell addSubview:self.scoreLabel];
+            [cell addSubview:self.activityNameLabel];
+            [cell addSubview:self.scoreStepper];
+            [cell addSubview:self.scoreCountLabel];
+            
+            return cell;
+        } else {
+            MTActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:ACTIVITY_CELL];
+            if (cell == nil) {
+                cell = [[MTActivityCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ACTIVITY_CELL];
             }
+            
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            if (indexPath.section == RISK_ROW) {
+                MTActivity *activity = self.riskActivitiesMutableArray[indexPath.row];
                 
-            default:
-                break;
+                cell.activityLabel.text = activity.name;
+                
+                if (activity.score > 0) {
+                    cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
+                    //                cell.microMortLabel.backgroundColor = [UIColor greenMortifyColor];
+                    cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
+                    cell.microMortLabel.textColor = [UIColor greenMortifyColor];
+                } else {
+                    cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
+                    //                cell.microMortLabel.backgroundColor = [UIColor orangeMortifyColor];
+                    cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
+                    cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
+                }
+                
+                cell.microMortLabel.font = [UIFont helveticaNeueThinWithSize:18.0f];
+            } else if (indexPath.section == SOCIAL) {
+                if (indexPath.row == 0) {
+                    cell.activityLabel.text = @"Friends do this daily";
+                    cell.microMortLabel.text = @"48";
+                } else if (indexPath.row == 1) {
+                    cell.activityLabel.text = @"Worldwide do this daily";
+                    cell.microMortLabel.text = @"26%";
+                    cell.microMortLabel.font = [UIFont helveticaNeueThinWithSize:16.0f];
+                } else if (indexPath.row == 2) {
+                    cell.activityLabel.text = @"23 year old men do this daily";
+                    cell.microMortLabel.text = @"46%";
+                    cell.microMortLabel.font = [UIFont helveticaNeueThinWithSize:16.0f];
+                }
+                
+                cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
+                cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
+            }
+            
+            return cell;
         }
-        
-        
-        return cell;
-        
-        
-        
     }
     
     // Is not suppose to return
