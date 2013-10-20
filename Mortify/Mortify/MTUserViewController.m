@@ -27,9 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stats-page.png"]];
-    [self.view addSubview:imageView];
-    self.view.backgroundColor = [UIColor redColor];
+//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stats-page.png"]];
+//    [self.view addSubview:imageView];
+//    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor blackBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning
