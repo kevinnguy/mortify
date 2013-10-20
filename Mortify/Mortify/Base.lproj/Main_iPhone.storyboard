@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="1238" y="1659"/>
         </scene>
-        <!--User View Controller - Hello-->
+        <!--User View Controller - Grim Reports-->
         <scene sceneID="vzw-z7-Zjh">
             <objects>
                 <viewController id="Ybg-46-ibL" customClass="MTUserViewController" sceneMemberID="viewController">
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Hello" id="F5V-YT-qBF"/>
+                    <navigationItem key="navigationItem" title="Grim Reports" id="F5V-YT-qBF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fu7-5o-3ZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
