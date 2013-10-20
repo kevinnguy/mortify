@@ -78,13 +78,13 @@
     self.countdownTimer.textColor = [UIColor whiteColor];
     
     NSDate *currentDate = [NSDate date];
-    NSDateComponents *currentDateComponents = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:currentDate];
-    NSDateComponents *currentDateToMidnight = [[NSDateComponents alloc] init];
-    [currentDateToMidnight setHour:-[currentDateComponents hour]];
-    [currentDateToMidnight setMinute:-[currentDateComponents minute]];
-    [currentDateToMidnight setSecond:-[currentDateComponents second]];
-    NSDate *midnight = [[NSCalendar currentCalendar] dateByAddingComponents:currentDateToMidnight toDate:currentDate options:0];
-    NSTimeInterval todayTimeInterval = [midnight timeIntervalSince1970];
+//    NSDateComponents *currentDateComponents = [[NSCalendar currentCalendar] components:NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit fromDate:currentDate];
+//    NSDateComponents *currentDateToMidnight = [[NSDateComponents alloc] init];
+//    [currentDateToMidnight setHour:-[currentDateComponents hour]];
+//    [currentDateToMidnight setMinute:-[currentDateComponents minute]];
+//    [currentDateToMidnight setSecond:-[currentDateComponents second]];
+//    NSDate *midnight = [[NSCalendar currentCalendar] dateByAddingComponents:currentDateToMidnight toDate:currentDate options:0];
+    NSTimeInterval todayTimeInterval = [currentDate timeIntervalSince1970];
     self.countdownTimer.text = [self stringFromTimeInterval:todayTimeInterval];
     
     self.timerView.backgroundColor = [UIColor blackBackgroundColor];

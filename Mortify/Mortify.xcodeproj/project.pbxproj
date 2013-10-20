@@ -47,6 +47,7 @@
 		9D493CDD18136A2C000D287A /* social-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDA18136A2C000D287A /* social-icon@2x.png */; };
 		9D493CDE18136A2C000D287A /* stats-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D493CDB18136A2C000D287A /* stats-icon@2x.png */; };
 		9D493CE1181394B8000D287A /* MTSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CE0181394B8000D287A /* MTSocialViewController.m */; };
+		9D493CE91813A89D000D287A /* KGStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D493CE81813A89D000D287A /* KGStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,8 @@
 		9D493CDB18136A2C000D287A /* stats-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats-icon@2x.png"; sourceTree = "<group>"; };
 		9D493CDF181394B8000D287A /* MTSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTSocialViewController.h; sourceTree = "<group>"; };
 		9D493CE0181394B8000D287A /* MTSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTSocialViewController.m; sourceTree = "<group>"; };
+		9D493CE71813A89D000D287A /* KGStatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KGStatusBar.h; sourceTree = "<group>"; };
+		9D493CE81813A89D000D287A /* KGStatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KGStatusBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 		9D493C711812E937000D287A = {
 			isa = PBXGroup;
 			children = (
+				9D493CE61813A89D000D287A /* KGStatusBar */,
 				4D0B9C321813A3770015D00B /* Fonts */,
 				4D0B9C17181399330015D00B /* plus-icon@2x.png */,
 				4D0B9C1518137AAB0015D00B /* stats-page@2x.png */,
@@ -252,6 +256,15 @@
 				9D493CA81812E937000D287A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D493CE61813A89D000D287A /* KGStatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				9D493CE71813A89D000D287A /* KGStatusBar.h */,
+				9D493CE81813A89D000D287A /* KGStatusBar.m */,
+			);
+			path = KGStatusBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +390,7 @@
 				9D493CB91812F084000D287A /* MTActivityCell.m in Sources */,
 				9D493C971812E937000D287A /* MTViewController.m in Sources */,
 				9D493CBC1812FCD8000D287A /* UIColor+Mortify.m in Sources */,
+				9D493CE91813A89D000D287A /* KGStatusBar.m in Sources */,
 				9D493C8E1812E937000D287A /* MTAppDelegate.m in Sources */,
 				9D493CCE18134082000D287A /* MTActivity.m in Sources */,
 				9D493CC51813104E000D287A /* MTAddActivityTableViewController.m in Sources */,
