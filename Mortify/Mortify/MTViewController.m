@@ -116,13 +116,21 @@
 }
 
 - (void)updateBarButtonPressed:(id)sender {
-    self.currentTime -= 6634;
-    NSInteger ti = (NSInteger)self.currentTime;
-    NSInteger seconds = ti % 60;
-    NSInteger minutes = (ti / 60) % 60;
-    NSInteger hours = (ti / 3600);
+    [UIView animateWithDuration:0.4 animations:^{
+        self.countdownTimer.alpha = 0.0f;
+    } completion:^(BOOL finished) {
+        self.currentTime -= 6634;
+        NSInteger ti = (NSInteger)self.currentTime;
+        NSInteger seconds = ti % 60;
+        NSInteger minutes = (ti / 60) % 60;
+        NSInteger hours = (ti / 3600);
+        
+        self.countdownTimer.text = [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
+    }];
     
-    self.countdownTimer.text = [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
+    [UIView animateWithDuration:0.4 animations:^{
+        self.countdownTimer.alpha = 1.0f;
+    }];
 }
 
 #pragma mark - Prepare segue

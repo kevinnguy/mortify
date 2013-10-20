@@ -31,7 +31,7 @@
         self.timestampLabel.textColor = [UIColor colorWithWhite:0.82f alpha:1.0f];
         
         self.activityLabel = [[UILabel alloc] initWithFrame:CGRectMake(10 + CGRectGetWidth(self.microMortLabel.frame) + 10, 10, CGRectGetWidth(self.contentView.frame) - 10 - CGRectGetWidth(self.microMortLabel.frame) - 10, 40)];
-        self.activityLabel.font = [UIFont helveticaNeueThinWithSize:26.0f];
+        self.activityLabel.font = [UIFont helveticaNeueThinWithSize:22.0f];
         self.activityLabel.textColor = [UIColor whiteColor];
         
         self.backgroundColor = [UIColor clearColor];

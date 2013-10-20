@@ -85,7 +85,7 @@
     self.scoreStepper.tintColor = self.scoreLabel.backgroundColor;
     
     self.scoreCountLabel = [[UILabel alloc] initWithFrame:CGRectMake(20 + CGRectGetWidth(self.scoreStepper.frame) + 10, CGRectGetHeight(self.scoreLabel.frame) + 40, CGRectGetWidth(self.view.frame) - 20 - CGRectGetWidth(self.scoreStepper.frame), 40)];
-    self.scoreCountLabel.font = [UIFont helveticaNeueThinWithSize:28.0f];
+    self.scoreCountLabel.font = [UIFont helveticaNeueThinWithSize:22.0f];
     self.scoreCountLabel.textColor = [UIColor whiteColor];
 
     // Match score count label with activity
@@ -181,26 +181,57 @@
     return 3;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSString *title = @"";
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    int height = 0;
     
     switch (section) {
         case DETAILS_ROW:
             break;
-          
+            
         case RISK_ROW:
-            title = @"Risks you can take";
+            height = 44;
             break;
             
         case SOCIAL:
-            title = @"Social";
+            height = 44;
             break;
             
         default:
             break;
     }
     
-    return title;
+    return height;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, CGRectGetWidth(tableView.frame) - 15, tableView.sectionHeaderHeight)];
+    label.font = [UIFont systemFontOfSize:18.0f];
+    label.textColor = [UIColor whiteColor];
+    
+    switch (section) {
+        case DETAILS_ROW:
+            label.frame = CGRectZero;
+            break;
+            
+        case RISK_ROW:
+            label.text = @"Risks you can take";
+            break;
+            
+        case SOCIAL:
+            label.text = @"Social Stats";
+            break;
+            
+        default:
+            break;
+    }
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(tableView.frame), tableView.sectionHeaderHeight)];
+    view.backgroundColor = [UIColor clearColor];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(view.frame) - 1, CGRectGetWidth(view.frame), 1)];
+    line.backgroundColor = [UIColor whiteTableViewSeparatorColor];
+    [view addSubview:label];
+    [view addSubview:line];
+    return view;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
