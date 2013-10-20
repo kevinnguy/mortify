@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTActivityDetailsViewController : UIViewController
+#import "MTActivity.h"
 
+@interface MTActivityDetailsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) MTActivity *activity;
 @end

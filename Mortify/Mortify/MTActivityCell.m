@@ -18,7 +18,7 @@
     if (self) {
         // Initialization code
         self.microMortLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 40, 40)];
-        self.microMortLabel.font = [UIFont systemFontOfSize:26.0f];
+        self.microMortLabel.font = [UIFont helveticaNeueThinWithSize:20.0f];
         self.microMortLabel.textAlignment = NSTextAlignmentCenter;
         self.microMortLabel.textColor = [UIColor whiteColor];
         self.microMortLabel.layer.borderColor = self.microMortLabel.textColor.CGColor;
@@ -26,7 +26,7 @@
         self.microMortLabel.layer.cornerRadius = CGRectGetWidth(self.microMortLabel.frame) / 2;
         
         self.activityLabel = [[UILabel alloc] initWithFrame:CGRectMake(10 + CGRectGetWidth(self.microMortLabel.frame) + 10, 10, CGRectGetWidth(self.contentView.frame) - 10 - CGRectGetWidth(self.microMortLabel.frame) - 10, 40)];
-        self.activityLabel.font = [UIFont systemFontOfSize:26.0f];
+        self.activityLabel.font = [UIFont helveticaNeueThinWithSize:26.0f];
         self.activityLabel.textColor = [UIColor whiteColor];
         
         self.backgroundColor = [UIColor clearColor];

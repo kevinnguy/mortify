@@ -9,7 +9,8 @@
 #import "MTActivityDetailsViewController.h"
 
 @interface MTActivityDetailsViewController ()
-
+@property (nonatomic, strong) UILabel *scoreLabel;
+@property (nonatomic, strong) UILabel *activityNameLabel;
 @end
 
 @implementation MTActivityDetailsViewController

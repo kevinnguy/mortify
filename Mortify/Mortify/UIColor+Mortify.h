@@ -13,4 +13,7 @@
 + (UIColor *)whiteTableViewSeparatorColor;
 + (UIColor *)blackNavigationBarColor;
 + (UIColor *)redMortifyColor;
++ (UIColor *)greenMortifyColor;
++ (UIColor *)orangeMortifyColor;
+
 @end
