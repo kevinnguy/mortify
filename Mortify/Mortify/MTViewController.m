@@ -80,7 +80,7 @@
 
     
     self.countdownTimer = [[UILabel alloc] initWithFrame:CGRectMake(30, 30, CGRectGetWidth(self.timerScrollView.frame) - 30 - 30, 80)];
-    self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:56.0f];
+    self.countdownTimer.font = [UIFont sourceSansProThinWithSize:56.0f];
     self.countdownTimer.textAlignment = NSTextAlignmentCenter;
     self.countdownTimer.textColor = [UIColor whiteColor];
     self.countdownTimer.text = @"13:35:23";
@@ -136,8 +136,11 @@
         
         if (indexPath.row == 0) {
             cell.microMortLabel.text = @"";
-            self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"plus-icon.png"]];
+            self.imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"stats-page.png"]];
+//            cell.microMortLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"plus-icon.png"]];
             [cell.microMortLabel addSubview:self.imageView];
+//            cell.microMortLabel.backgroundColor = [UIColor clearColor];
+//            [cell.microMortLabel sendSubviewToBack:self.imageView];
         } else {
             if (activity.score > 0) {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];

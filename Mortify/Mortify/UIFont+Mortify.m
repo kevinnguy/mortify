@@ -12,4 +12,7 @@
 + (UIFont *)helveticaNeueThinWithSize:(CGFloat)size {
     return [UIFont fontWithName:@"HelveticaNeue-Thin" size:size];
 }
++ (UIFont *)sourceSansProThinWithSize:(CGFloat)size {
+    return [UIFont fontWithName:@"SourceSansPro-Black" size:size];
+}
 @end
