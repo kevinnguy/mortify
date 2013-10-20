@@ -18,7 +18,7 @@
     [self setupAppearance];
     
     // Show time of life
-    [KGStatusBar showStatusForever:@"63 years and 123 days left"];
+    [KGStatusBar showStatusForever:@"63 years \u2022 123 days left"];
     
     return YES;
 }

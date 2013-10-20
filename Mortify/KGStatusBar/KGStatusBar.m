@@ -125,7 +125,7 @@
 
 - (UIView *)topBar {
     if(!topBar) {
-        int width = 70;
+        int width = 82;
         topBar = [[UIView alloc] initWithFrame:CGRectMake(width, 1.f, [self rotatedSize].width - width - width, 20.0f)];
         [overlayWindow addSubview:topBar];
     }
