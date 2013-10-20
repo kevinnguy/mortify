@@ -10,4 +10,5 @@
 
 @interface UIFont (Mortify)
 + (UIFont *)helveticaNeueThinWithSize:(CGFloat)size;
++ (UIFont *)sourceSansProThinWithSize:(CGFloat)size;
 @end
