@@ -18,6 +18,7 @@
     self.name = name;
     self.baseScore = score;
     self.score = score;
+    self.timestamp = [NSDate date];
     
     return self;
 }

@@ -27,6 +27,11 @@
 @property (nonatomic) int selectedActivityLogArrayIndex;
 
 @property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) NSDateFormatter *dateTimeFormatter;
+
+@property (nonatomic) int currentTime;
+@property (nonatomic, strong) NSTimer *clockTimer;
 @end
 
 
@@ -35,13 +40,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // Datasource
+    self.currentTime = 40234;
+    self.clockTimer = [[NSTimer alloc] init];
+    
+    self.dateTimeFormatter = [[NSDateFormatter alloc] init];
+    [self.dateTimeFormatter setDateFormat:@"hh:mm"];
+    
+    MTActivity *addActivity = [[MTActivity alloc] initWithActivity:@"Add Activity" score:0];
+    self.activityLogMutableArray = [@[addActivity] mutableCopy];
+    
     [self setupTabBar];
     [self setupNavigationBar];
     [self setupTableView];
     [self setupTimerView];
     
-    MTActivity *addActivity = [[MTActivity alloc] initWithActivity:@"Add Activity" score:0];
-    self.activityLogMutableArray = [@[addActivity] mutableCopy];
 //    [self setNeedsStatusBarAppearanceUpdate];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 }
@@ -78,14 +91,38 @@
     self.countdownTimer.font = [UIFont helveticaNeueThinWithSize:52.0f];
     self.countdownTimer.textAlignment = NSTextAlignmentCenter;
     self.countdownTimer.textColor = [UIColor whiteColor];
-    self.countdownTimer.text = @"13:12:45";
+    
+    NSInteger ti = (NSInteger)self.currentTime;
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = (ti / 3600);
+    
+    self.countdownTimer.text = [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
+    
+    self.clockTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(countDownTime) userInfo:nil repeats:YES];
     
     self.timerView.backgroundColor = [UIColor blackBackgroundColor];
     [self.timerView addSubview:self.countdownTimer];
 }
 
-- (void)updateBarButtonPressed:(id)sender {
+- (void)countDownTime {
+    self.currentTime--;
+    NSInteger ti = (NSInteger)self.currentTime;
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = (ti / 3600);
     
+    self.countdownTimer.text = [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
+}
+
+- (void)updateBarButtonPressed:(id)sender {
+    self.currentTime -= 6634;
+    NSInteger ti = (NSInteger)self.currentTime;
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = (ti / 3600);
+    
+    self.countdownTimer.text = [NSString stringWithFormat:@"%02i:%02i:%02i", hours, minutes, seconds];
 }
 
 #pragma mark - Prepare segue
@@ -137,17 +174,15 @@
         } else {
             if (activity.score > 0) {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score];
-//                cell.microMortLabel.backgroundColor = [UIColor greenMortifyColor];
                 cell.microMortLabel.layer.borderColor = [UIColor greenMortifyColor].CGColor;
                 cell.microMortLabel.textColor = [UIColor greenMortifyColor];
             } else {
                 cell.microMortLabel.text = [NSString stringWithFormat:@"%0.1f", activity.score * -1];
-//                cell.microMortLabel.backgroundColor = [UIColor orangeMortifyColor];
                 cell.microMortLabel.layer.borderColor = [UIColor orangeMortifyColor].CGColor;
                 cell.microMortLabel.textColor = [UIColor orangeMortifyColor];
             }
             
-//            cell.microMortLabel.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:18];
+            cell.timestampLabel.text = [NSString stringWithFormat:@"%@ am", [self.dateTimeFormatter stringFromDate:activity.timestamp]];
         }
         
         
